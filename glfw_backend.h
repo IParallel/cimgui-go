@@ -156,7 +156,7 @@ enum GLFWWindowFlags_ {
   GLFWWindowFocused = GLFW_FOCUSED,
   GLFWWindowIconified = GLFW_ICONIFIED,
   GLFWWindowAutoIconify = GLFW_AUTO_ICONIFY,
-  GLFWMousePassthrough = GLFW_MOUSE_PASSTHROUGH
+  GLFWMousePassthrough = GLFW_MOUSE_PASSTHROUGH,
 };
 
 typedef struct CImage {
@@ -196,7 +196,8 @@ extern void igRefresh();
 extern ImTextureID igCreateTexture(unsigned char *pixels, int width, int height);
 extern void igDeleteTexture(ImTextureID id);
 extern void igWindowHint(GLFWWindowFlags hint, int value);
-extern void iggImplGlfw_KeyCallback(GLFWwindow* w, int k,int s,int a,int m);
+extern void iggImplGlfw_KeyCallback(GLFWwindow *w, int k,int s,int a,int m);
+extern void igSetWindowAttr(GLFWwindow *w, int flag, int val);
 
 extern void dropCallback(int, char **);
 extern void closeCallback(GLFWwindow *window);

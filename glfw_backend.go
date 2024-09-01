@@ -398,6 +398,11 @@ func (b *GLFWBackend) SetWindowFlags(flag GLFWWindowFlags, value int) {
 	C.igWindowHint(C.GLFWWindowFlags(flag), C.int(value))
 }
 
+// SetWindowAttr sets attributes to the current created window
+func (b *GLFWBackend) SetWindowAttr(flag GLFWWindowFlags, value int) {
+	C.igSetWindowAttr(b.handle(), C.GLFWWindowFlags(flag), C.int(value))
+}
+
 // SetIcons sets icons for the window.
 // THIS CODE COMES FROM https://github.com/go-gl/glfw (BSD-3 clause) - Copyright (c) 2012 The glfw3-go Authors. All rights reserved.
 func (b *GLFWBackend) SetIcons(images ...image.Image) {
