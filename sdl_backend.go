@@ -303,6 +303,11 @@ func (b *SDLBackend) closeCallback() func(wnd unsafe.Pointer) {
 	return b.closeCB
 }
 
+// does nothing in SDL
+func (b *SDLBackend) SetWindowAttr(flag SDLWindowFlags, value int) {
+
+}
+
 func (b *SDLBackend) SetWindowPos(x, y int) {
 	C.igSDLWindow_SetWindowPos(b.handle(), C.int(x), C.int(y))
 }
