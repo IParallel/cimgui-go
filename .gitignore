@@ -67,6 +67,9 @@ thirdparty/glfw/build
 # Vim cache files
 *.swp
 
+# VSCODE
+.vscode
+
 # make update temporary directory
 tmp
 
