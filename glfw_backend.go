@@ -41,6 +41,7 @@ const (
 	GLFWWindowFlagsFocused     = GLFWWindowFlags(C.GLFWWindowFocused)
 	GLFWWindowFlagsIconified   = GLFWWindowFlags(C.GLFWWindowIconified)
 	GLFWWindowFlagsAutoIconify = GLFWWindowFlags(C.GLFWWindowAutoIconify)
+	GLFWMousePassthrough       = GLFWWindowFlags(C.GLFWMousePassthrough)
 )
 
 // SwapInterval values
