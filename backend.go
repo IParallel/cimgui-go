@@ -142,6 +142,7 @@ type Backend[BackendFlagsT ~int] interface {
 	// SetWindowFlags selected hint to specified value.
 	// ATTENTION: This method is able to set only one flag per call.
 	SetWindowFlags(flag BackendFlagsT, value int)
+	SetWindowAttr(flag BackendFlagsT, value int)
 	SetIcons(icons ...image.Image)
 	SetSwapInterval(interval BackendFlagsT) error
 	SetCursorPos(x, y float64)
